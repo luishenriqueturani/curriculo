@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/funcoes.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" 
+    integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous"/>
+
+    <title>Lista de Exercícios</title>
+</head>
+
+<body>
+
+    <!-- começa a navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profissional.html">Experiência Profissional</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="formacao.html" tabindex="-1">Formação Acadêmica</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="projetos.html">Projetos</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- termina a navbar -->
+
+    <div class="container">
+        <h1>Lista de Exercícios realizados em Java Script</h1>
+        <!-- Grupo de divs para listar os exercícios -->
+        <div class="row">
+            <div class="col-xl" id="divExecs">
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-outline-secondary" type="button" onclick="escolher()">Escolher</button>
+                    </div>
+                    <select class="custom-select" id="selExercicio" aria-label="Exercícios em Java Script">
+                        <option selected>Escolha um...</option>
+                        <option value="1">Exercício 01</option>
+                        <option value="2">Exercício 02</option>
+                        <option value="3">Exercício 03</option>
+                        <option value="4">Exercício 04</option>
+                        <option value="5">Exercício 05</option>
+                        <option value="6">Exercício 06</option>
+                        <option value="7">Exercício 07</option>
+                        <option value="8">Exercício 08</option>
+                        <option value="9">Exercício 09</option>
+                        <option value="10">Exercício 10</option>
+                        <option value="11">Exercício 11</option>
+                        <option value="12">Exercício 12</option>
+                        <option value="13">Exercício 13</option>
+                        <option value="14">Exercício 14</option>
+                        <option value="15">Exercício 15</option>
+                        <option value="16">Exercício 16</option>
+                        <option value="17">Exercício 17</option>
+                        <option value="18">Exercício 18</option>
+                        <option value="19">Exercício 19</option>
+                        <option value="20">Exercício 20</option>
+                        <option value="21">Exercício 21</option>
+                        <option value="22">Exercício 22</option>
+                        <option value="23">Exercício 23</option>
+                        <option value="24">Exercício 24</option>
+                        <option value="25">Exercício 25</option>
+                        <option value="26">Exercício 26</option>
+                        <option value="27">Exercício 27</option>
+                        <option value="28">Exercício 28</option>
+                    </select>
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl" id="quest">
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl" id="res">
+
+            </div>
+        </div>
+
+        <hr />
+        <footer>
+            <div class="row">
+                <div class="col-sm">
+                    <h2>Contato</h2>
+                    <p id='fone'>
+                        
+                    </p>
+                    <p>
+                        E-mail: luis_henrique_t@hotmail.com
+                    </p>
+                    <p><a href="http://linkedin.com/in/luis-henrique-turani" target="_blank">Linkedin</a></p>
+                </div>
+                <div class="col-sm footdireito">
+                    <p>Desenvolvido por Luís Henrique Turani</p>
+                    <!-- Button trigger modal -->
+                    <p data-toggle="modal" data-target="#exampleModal" onclick="info()" class="ponteiro">Sobre este
+                        Site</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="corpoTexto"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="limparModal()">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- JS do Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+    <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+    <script src="js/funcoes.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            fones();
+        });    
+    </script>
+</body>
+
+</html>

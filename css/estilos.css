@@ -1,0 +1,201 @@
+@charset "UTF-8";
+/* 
+    Created on : 10/02/2019, 13:57:13
+    Author     : luis_
+*/
+
+body p, body li {
+    text-align: justify;
+}
+.indent{
+
+    text-indent: 30px;
+}
+
+a{
+    color: royalblue;
+}
+
+li{
+    list-style-type: none;
+}
+
+div.container {
+	box-shadow: 1px 1px 1px #ddd;
+}
+
+img.img-thumbnail {
+    height: auto;
+    width: 180px;
+    margin-left: 20px;
+}
+
+.icones {
+    height: auto;
+    width: 40px;
+}
+
+.iconesCirculo{
+    border-radius: 50%;
+}
+
+.quebrador{
+    display: none;
+}
+
+/* Collapses */
+.card{
+    width: 800px;
+    white-space: normal;
+}
+
+.mini-card{
+    width: 600px;
+}
+
+div.container section div.row div.accordion div.card div#collapseOne div.card-body ul#collapseMat li {
+    list-style: none;
+}
+div.container section div.row div.accordion div.card div div.card-body ul li {
+
+    text-indent: 0%;
+}
+
+div.container section div.row div.accordion div.card div#collapseOne div.card-body ul#collapseMat li.ciclos {
+    padding: 2px;
+    margin-bottom: 2px;
+}
+
+.saberMais {
+    
+    top: .5rem;
+    right: .5rem;
+    z-index: 10;
+    display: block;
+    padding: .25rem .5rem;
+    font-size: 12pt;
+    font-weight: lighter;
+    color: #696969;
+    margin-right: 5px;
+    position: absolute;
+    background-color: #fff;
+    border: none;
+    word-wrap: break-word;
+}
+
+.saberMais:hover{
+    cursor: pointer;
+}
+.saberMais2:hover{
+    cursor: pointer;
+}
+
+.saberMais2{
+    font-size: 12pt;
+    font-weight: lighter;
+    color: #696969;
+    display: none;
+    background-color: #fff;
+    border: none;
+}
+
+
+
+
+/* collapses */
+
+div.container h2 {
+	font-size: 15pt;
+	font-weight: bold;
+}
+
+div.container h3 {
+	font-size: 13pt;
+	font-weight: bold;
+}
+
+div.contaier footer div#exampleModalLong2 div.modal-dialog div.modal-content div.modal-body p ul li {
+    list-style-type: none;
+}
+
+div.container footer h2 {
+	font-size: 15pt;
+	font-weight: bold;
+}
+
+div.container footer a {
+	text-decoration: none;
+	color: #696969;
+}
+
+div.container footer div.row div.footdireito{
+    margin-top: 30px;
+}
+
+
+
+/* Página hardware */
+
+div.container section h3#hard {
+    margin-top: 20px;
+}
+
+div.container section p#p2 {
+    margin-top: 20px;
+}
+
+div.container section hr#separador {
+    margin-top: 30px;
+}
+
+div.carousel-item img {
+    max-width: auto;
+    height: auto;
+}
+
+/* termina css hardware */
+
+
+
+.ponteiro:hover{
+    cursor: pointer;
+}
+
+/* media query */
+
+@media(max-width: 990px)
+{
+    img.img-thumbnail
+    {
+        display: none;
+    }
+    .saberMais{
+        display: none;
+    }
+    .card{
+        width: auto;
+    }
+    .saberMais2{
+        display: inherit;
+    }
+    .mini-card{
+        width: auto;
+    }
+    .quebrador{
+        display: inherit;
+    }
+
+}
+
+/* lista de exercícios de JS 
+
+#divExecs{
+    min-height: 500px;
+}*/
+
+#tbe01{
+    border: black 1px;
+    padding: 2px;
+}
+
+
