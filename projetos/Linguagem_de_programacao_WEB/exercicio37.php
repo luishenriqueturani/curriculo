@@ -20,11 +20,20 @@
             <input type="submit" name="btn3" value="Testar conecção">
         </form>
         <?php
-            $banco = mysqli_connect('localhost', 'root', '', 'exercicio37');
+
+            define("DSN", "mysql");
+            define("SERVIDOR", "localhost");
+            define("USUARIO", "root");
+            define("SENHA", null);
+            define("BANCODEDADOS", "exercicio37");
+            function conectar() {
+
+                $conn = new PDO(DSN.':host='.SERVIDOR.';dbname='.BANCODEDADOS,USUARIO,SENHA);//a conexão é estabelecida, recebendo as constantes como valor nos seus campos
+                return $conn;
+            }
             
             if(isset($_REQUEST['btn3'])){
-                //$db = mysqli_select_db('exercicio37',$banco);
-                if(!$banco){
+                if(conectar()){
                     echo "Falha ao conectar.";
                     exit();
                 }else{
@@ -37,13 +46,13 @@
                 $data = $_REQUEST['data'];
                 $idade = $_REQUEST['idade'];
                 $cep = $_REQUEST['cep'];
-                //$db = mysqli_select_db('exercicio37',$banco);
-                if(!$banco){
+                if(!conectar()){
                     echo "Falha ao conectar.";
                     exit();
                 }else{
-                    $gravar = "INSERT INTO cadastro ('cpf','nome','data_nascimento','idade','cep') VALUES('$cpf','$nome','$data','$idade','$cep');";
-                    echo $banco->query($gravar).'Dados gravados, clique em ler para ver seus dados.';
+                    $gravar = conectar()-prepare("INSERT INTO cadastro ('cpf','nome','data_nascimento','idade','cep') VALUES('$cpf','$nome','$data','$idade','$cep');");
+                    $gravar->execute();
+                    echo 'Dados gravados, clique em ler para ver seus dados.';
                 }
             }
             if(isset($_REQUEST['btn2'])){
@@ -52,20 +61,17 @@
                 $data = $_REQUEST['data'];
                 $idade = $_REQUEST['idade'];
                 $cep = $_REQUEST['cep'];
-                //$db = mysqli_select_db('exercicio37',$banco);
-                if(!$banco){
+                if(!conectar()){
                     echo "Falha ao conectar.";
                     exit();
                 }else{
-                    $ler = "SELECT * FROM 'cadastro'";
-                    
-                    if($retorno = mysqli_query($banco,$ler)){
-                        $rowcount = mysqli_num_rows($retorno);
-                        printf("Resultado da busca: \n",$rowcount);
-                        mysqli_free_result($retorno);
-
+                    $ler = conectar()->prepare("SELECT * FROM 'cadastro'");
+                    $ler->execute();
+                    $retorno = "";
+                    while($registro = $ler->fetch()){
+                        $retorno .= "<P>".$registro["cpf"]." - ".$registro["nome"]."</p>";
                     }
-                
+                    echo "$retorno";
                 }
             }
             
