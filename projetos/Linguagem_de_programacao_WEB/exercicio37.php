@@ -33,7 +33,7 @@
             }
             
             if(isset($_REQUEST['btn3'])){
-                if(conectar()){
+                if(!conectar()){
                     echo "Falha ao conectar.";
                     exit();
                 }else{
@@ -50,7 +50,7 @@
                     echo "Falha ao conectar.";
                     exit();
                 }else{
-                    $gravar = conectar()-prepare("INSERT INTO cadastro ('cpf','nome','data_nascimento','idade','cep') VALUES('$cpf','$nome','$data','$idade','$cep');");
+                    $gravar = conectar()->prepare("INSERT INTO cadastro ('cpf','nome','data_nascimento','idade','cep') VALUES('".$cpf."','".$nome."','".$data."','".$idade."','".$cep."');");
                     $gravar->execute();
                     echo 'Dados gravados, clique em ler para ver seus dados.';
                 }
