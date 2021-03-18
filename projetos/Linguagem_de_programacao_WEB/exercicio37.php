@@ -51,7 +51,8 @@
                     exit();
                 }else{
                     try {
-                        $gravar = conectar()->prepare("INSERT INTO cadastro ('cpf','nome','data_nascimento','idade','cep') VALUES('".$cpf."','".$nome."','".$data."','".$idade."','".$cep."');");
+                        $query = 'INSERT INTO cadastro VALUES("'.$cpf.'","'.$nome.'","'.$data.'","'.$idade.'","'.$cep.'");';
+                        $gravar = conectar()->prepare("$query");
                         $gravar->execute();
                         echo 'Dados gravados, clique em ler para ver seus dados.';
                         
