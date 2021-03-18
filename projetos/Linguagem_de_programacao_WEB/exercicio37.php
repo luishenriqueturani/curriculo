@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <title>Exercício 37</title>
@@ -76,7 +76,7 @@
                         $ler->execute();
                         $retorno = "";
                         while($registro = $ler->fetch()){
-                            $retorno .= $registro["cpf"]." - ".$registro["nome"];
+                            $retorno .= $registro["cpf"]." - ".$registro["nome"]."<br>";
                         }
                         echo $retorno;
                     } catch (Exception $ex) {
