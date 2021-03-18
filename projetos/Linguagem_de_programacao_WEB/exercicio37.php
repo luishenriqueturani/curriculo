@@ -65,7 +65,7 @@
                     echo "Falha ao conectar.";
                     exit();
                 }else{
-                    $ler = conectar()->prepare("SELECT * FROM 'cadastro'");
+                    $ler = conectar()->prepare("SELECT * FROM cadastro");
                     $ler->execute();
                     $retorno = "";
                     while($registro = $ler->fetch()){
