@@ -28,9 +28,9 @@ function info(){ //gera o html para o modal de sobre o site
         </li>
     </ul>`
     //Gera o código do campo de última data de modificação
-    var data = document.getElementById('data').innerHTML = '09/03/2021';
+    var data = document.getElementById('data').innerHTML = '18/03/2021';
     //gera o código do campo de versão do site
-    var versao = document.getElementById('versao').innerHTML = "Versao 3.0<br/><a href='versoes.html'>Notas das versões</a>";
+    var versao = document.getElementById('versao').innerHTML = "Versao 3.0.2<br/><a href='versoes.html'>Notas das versões</a>";
     //gera o campo de IDEs usadas
     var ides = document.getElementById('ides').innerHTML = '<li>Netbeans 8.2, posteriormente o Apache Netbeans 12.</li><li>Sublime Text (Não o uso mais)</li><li>Brackets (Não o uso mais)</li><li>Visual Studio Code</li><li>Android Studio</li><li>MySQL Worckbench 8.0</li><li>Xampp</li><li>Node.js</li><li>Gimp 2.10.20</li><li>Inkscape</li><li>Godot 3.2.1</li><li>FileZilla</li>'
     //gera o código para o campo de navegadores testados
@@ -63,6 +63,7 @@ function info(){ //gera o html para o modal de sobre o site
 //modifica o corpo de texto da página com o que foi modificado em cada versão
 function notasVersao(){
     let notas = document.getElementById('nota').innerHTML = `
+    <p>Versão 3.0.2 – Foi corrigido o Banco de Dados do Exercício 37 de Linguagem de Programação Web, ele não havia sido feito neste servidor.</p>
     <p>Versão 3.0.1 – Foi adicionado o campo de idade na tela inicial, campo esse que é automático, a idade é calculada capturando a data atual e fazendo o cálculo do dia, mês e ano. Houve também algumas modificações pequenas e pontuais.</p>
     <p>Versão 3.0 – Foi feita a migração para o Bootstrap Material Design, no processo houve alguns problemas com a página de Projetos, problemas esses que só foram corrigidos com a página sendo refeita. Neste processo foi aproveitado para otimizar a página, tendo agora um modal universal único para a página, várias tags que não tinham utilidade alguma foram removidas, o código foi melhor comentado, e essas mudanças fizeram reduzir de 920 linhas para 870 linhas, o que ajuda a melhorar o desempenho da página. Na migração também mudou a paleta de cores, foi adotado o tema escuro para a Navbar e o accent color agora é o aqua blue.</p>
     <p>Versão 2.5 - Adicionados os primeiros conteúdos do curso de ADS. Adicionado conteúdos do Godot. Adicionada página própria para as versões. Criada função para carregar o número de telefone, centralizando esta informação evitando uma mudança pontual em várias páginas. Todos os downloads estão no Mega agora.</p>
