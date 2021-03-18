@@ -69,9 +69,9 @@
                     $ler->execute();
                     $retorno = "";
                     while($registro = $ler->fetch()){
-                        $retorno .= "<P>".$registro["cpf"]." - ".$registro["nome"]."</p>";
+                        $retorno .= $registro["cpf"]." - ".$registro["nome"];
                     }
-                    echo "$retorno";
+                    echo $retorno;
                 }
             }
             
