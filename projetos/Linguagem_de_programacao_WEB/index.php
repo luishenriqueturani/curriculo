@@ -228,7 +228,7 @@
                     exit;
                 }
                 if($select == '37'){
-                    header('Location: exercicio37test.php');
+                    header('Location: exercicio37.php');
                     exit;
                 }
                 
