@@ -17,7 +17,7 @@
             <p>cep: <input type="text" name="cep"></p>
             <input type="submit" name="btn1" value="gravar">
             <input type="submit" name="btn2" value="ler">
-            <input type="submit" name="btn3" value="Testar conecção">
+            <input type="submit" name="btn3" value="Testar conexão">
         </form>
         <?php
 
