@@ -50,9 +50,14 @@
                     echo "Falha ao conectar.";
                     exit();
                 }else{
-                    $gravar = conectar()->prepare("INSERT INTO cadastro ('cpf','nome','data_nascimento','idade','cep') VALUES('".$cpf."','".$nome."','".$data."','".$idade."','".$cep."');");
-                    $gravar->execute();
-                    echo 'Dados gravados, clique em ler para ver seus dados.';
+                    try {
+                        $gravar = conectar()->prepare("INSERT INTO cadastro ('cpf','nome','data_nascimento','idade','cep') VALUES('".$cpf."','".$nome."','".$data."','".$idade."','".$cep."');");
+                        $gravar->execute();
+                        echo 'Dados gravados, clique em ler para ver seus dados.';
+                        
+                    } catch (Exception $ex) {
+                        echo "$ex";
+                    }
                 }
             }
             if(isset($_REQUEST['btn2'])){
@@ -65,13 +70,17 @@
                     echo "Falha ao conectar.";
                     exit();
                 }else{
-                    $ler = conectar()->prepare("SELECT * FROM cadastro");
-                    $ler->execute();
-                    $retorno = "";
-                    while($registro = $ler->fetch()){
-                        $retorno .= $registro["cpf"]." - ".$registro["nome"];
+                    try {
+                        $ler = conectar()->prepare("SELECT * FROM cadastro");
+                        $ler->execute();
+                        $retorno = "";
+                        while($registro = $ler->fetch()){
+                            $retorno .= $registro["cpf"]." - ".$registro["nome"];
+                        }
+                        echo $retorno;
+                    } catch (Exception $ex) {
+                        echo "$ex";
                     }
-                    echo $retorno;
                 }
             }
             
