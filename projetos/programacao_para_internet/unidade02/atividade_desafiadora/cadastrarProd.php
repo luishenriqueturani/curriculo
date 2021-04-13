@@ -72,7 +72,7 @@
                     </div>
                     
                     <?php
-                    $banco = mysqli_connect('localhost', 'root', '', 'atividade_desafiadora');  //conecta com o banco
+                    $banco = mysqli_connect("sql312.epizy.com", "epiz_26061509", "geyKgAixlnZF", "epiz_26061509_teste");  //conecta com o banco
                     echo '<label for="select-fornecedor">Fornecedor*</label>';                  //cria um select para escolher o fornecedor, escolhi fazer isso por php para que o tempo de carregamento seja o mesmo do conteúdo
                     echo '<select class="form-control" id="select-fornecedor"  name="select-fornecedor" required=""><option>Escolha o fornecedor</option>';
                     if ($banco) {                                                               //se tiver sucesso na conexão executa os códigos, senão...
@@ -95,7 +95,7 @@
             </form>
             <?php
             if (isset($_REQUEST['cadastrarProdutos'])) {                                        //se o botão for clicado
-                $bancoCon = mysqli_connect('localhost', 'root', '', 'atividade_desafiadora');   //conecta no banco de dados
+                $banco = mysqli_connect("sql312.epizy.com", "epiz_26061509", "geyKgAixlnZF", "epiz_26061509_teste");   //conecta no banco de dados
                 if ($bancoCon) {                                                                //se foi possível se conectar executa os códigos, senão...
                     echo '<script>console.log("Conectado")</script>'; //solta uma mensagem de conectado no console do navegador
                     $cod = $_REQUEST['inputCod'];                      //os valores contidos no formulário são atribuidos às variáveis

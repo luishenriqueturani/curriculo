@@ -30,7 +30,7 @@ function info(){ //gera o html para o modal de sobre o site
     //Gera o código do campo de última data de modificação
     var data = document.getElementById('data').innerHTML = '18/03/2021';
     //gera o código do campo de versão do site
-    var versao = document.getElementById('versao').innerHTML = "Versao 3.0.2<br/><a href='versoes.html'>Notas das versões</a>";
+    var versao = document.getElementById('versao').innerHTML = "Versao 3.0.3<br/><a href='versoes.html'>Notas das versões</a>";
     //gera o campo de IDEs usadas
     var ides = document.getElementById('ides').innerHTML = '<li>Netbeans 8.2, posteriormente o Apache Netbeans 12.</li><li>Sublime Text (Não o uso mais)</li><li>Brackets (Não o uso mais)</li><li>Visual Studio Code</li><li>Android Studio</li><li>MySQL Worckbench 8.0</li><li>Xampp</li><li>Node.js</li><li>Gimp 2.10.20</li><li>Inkscape</li><li>Godot 3.2.1</li><li>FileZilla</li>'
     //gera o código para o campo de navegadores testados
@@ -39,16 +39,11 @@ function info(){ //gera o html para o modal de sobre o site
         <li>Mozila Firefox Versão 86.0</li>
         <li>Opera Versão 74.0.3911.203</li>
         <li>Microsoft Edge versão 89.0.774.48</li>
-        <li>Vivaldi 3.1.1929.45</li>
-        <li>Midori Web Browser V9.0</li>
-        <li>Gnome Web 3.36.2(Conhecido também como Epiphani)</li>
-        <li>Microsoft Internet Explorer 11 versão 11.900.18362.0</li>
     </ul>
     <ul><p>Versões de Smartphones</p>
         <li>Google Chrome Versão 85.0.4183.83</li>
         <li>Microsoft Edge 45.05.4.5036</li>
         <li>Mozila Firefox Versão 68.9.0</li>
-        <li>Samsung Internet versão 11.2.2.3</li>
         <li>Opera versão 58.2.2878.53402</li>
         <li>Vivaldi 3.1.1935.19</li>
     </ul>
@@ -63,6 +58,7 @@ function info(){ //gera o html para o modal de sobre o site
 //modifica o corpo de texto da página com o que foi modificado em cada versão
 function notasVersao(){
     let notas = document.getElementById('nota').innerHTML = `
+    <p>Versão 3.0.3 – Foi adicionado as Atividades Desafiadoras das Unidades 05 e 06 de Programação para Internet, como também, para fazerem elas funcionarem, foi criado as tabelas de BD necessárias para as atividades funcionarem. Por decisão minha, deixei de testar em alguns navegadores, são eles: Midori, Gnome Web, Samsung Internet, Vivaldi de desktop e Internet Explorer, então removi eles dos navegadores testados.</p>
     <p>Versão 3.0.2 – Foi corrigido o Banco de Dados do Exercício 37 de Linguagem de Programação Web, ele não havia sido feito neste servidor. Foi também adicionado a matéria de Programação para Internet no Curso de ADS, porém apenas as Unidades 02 e 03, que são as já terminadas.</p>
     <p>Versão 3.0.1 – Foi adicionado o campo de idade na tela inicial, campo esse que é automático, a idade é calculada capturando a data atual e fazendo o cálculo do dia, mês e ano. Houve também algumas modificações pequenas e pontuais.</p>
     <p>Versão 3.0 – Foi feita a migração para o Bootstrap Material Design, no processo houve alguns problemas com a página de Projetos, problemas esses que só foram corrigidos com a página sendo refeita. Neste processo foi aproveitado para otimizar a página, tendo agora um modal universal único para a página, várias tags que não tinham utilidade alguma foram removidas, o código foi melhor comentado, e essas mudanças fizeram reduzir de 920 linhas para 870 linhas, o que ajuda a melhorar o desempenho da página. Na migração também mudou a paleta de cores, foi adotado o tema escuro para a Navbar e o accent color agora é o aqua blue.</p>

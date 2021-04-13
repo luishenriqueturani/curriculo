@@ -44,7 +44,7 @@
                 </thead>
                 <tbody>
                     <?php
-                    $banco = mysqli_connect('localhost', 'root', '', 'atividade_desafiadora');  //conecta-se com o BD
+                    $banco = mysqli_connect("sql312.epizy.com", "epiz_26061509", "geyKgAixlnZF", "epiz_26061509_teste");  //conecta-se com o BD
                     if ($banco) {                                                             //se foi possível se conectar executa os códigos, senão...
                         $ler = 'SELECT p.cod, p.marca, p.modelo, p.cor, p.preco, f.nome FROM produto as p, fornecedor as f WHERE p.cod_fornecedor = f.id;';
                         $retornoLer = mysqli_query($banco, $ler);                   //a variável ler recebe a query

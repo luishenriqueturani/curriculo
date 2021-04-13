@@ -90,7 +90,7 @@
             </form>
             <?php
                 if(isset($_REQUEST['cadastrar'])){//se o botão cadastrar é clicado...
-                    $banco = mysqli_connect("localhost", "root", "", "atividade_desafiadora");//a variável banco recebe a conexão,valores( local ou endereço, usuário ou adm do banco, senha de conexão, nome do BD)
+                    $banco = mysqli_connect("sql312.epizy.com", "epiz_26061509", "geyKgAixlnZF", "epiz_26061509_teste");//a variável banco recebe a conexão,valores( local ou endereço, usuário ou adm do banco, senha de conexão, nome do BD)
                     if(!$banco){ //o retorno da conexão é um boleano, 0 ou 1
                         die ("Erro ao conectar!"); //caso dê o valor 0, significa que não conectou, então encerra os trabalhos e dá uma mensagem de erro ao conectar
                     }else{//senão
