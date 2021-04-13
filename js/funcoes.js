@@ -40,6 +40,7 @@ function info(){ //gera o html para o modal de sobre o site
         <li>Opera Versão 74.0.3911.203</li>
         <li>Microsoft Edge versão 89.0.774.48</li>
     </ul>
+    <br>
     <ul><p>Versões de Smartphones</p>
         <li>Google Chrome Versão 85.0.4183.83</li>
         <li>Microsoft Edge 45.05.4.5036</li>
