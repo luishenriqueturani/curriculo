@@ -28,25 +28,25 @@ function info(){ //gera o html para o modal de sobre o site
         </li>
     </ul>`
     //Gera o código do campo de última data de modificação
-    var data = document.getElementById('data').innerHTML = '12/04/2021';
+    var data = document.getElementById('data').innerHTML = '04/05/2021';
     //gera o código do campo de versão do site
-    var versao = document.getElementById('versao').innerHTML = "Versao 3.0.3<br/><a href='versoes.html'>Notas das versões</a>";
+    var versao = document.getElementById('versao').innerHTML = "Versao 3.0.4<br/><a href='versoes.html'>Notas das versões</a>";
     //gera o campo de IDEs usadas
     var ides = document.getElementById('ides').innerHTML = '<li>Netbeans 8.2, posteriormente o Apache Netbeans 12.</li><li>Sublime Text (Não o uso mais)</li><li>Brackets (Não o uso mais)</li><li>Visual Studio Code</li><li>Android Studio</li><li>MySQL Worckbench 8.0</li><li>Xampp</li><li>Node.js</li><li>Gimp 2.10.20</li><li>Inkscape</li><li>Godot 3.2.1</li><li>FileZilla</li>'
     //gera o código para o campo de navegadores testados
     var nav = document.getElementById('navs').innerHTML = `<ul><p>Versões para Desktop</p>
-        <li>Google Chrome Versão 89.0.4389.82</li>
-        <li>Mozila Firefox Versão 86.0</li>
-        <li>Opera Versão 74.0.3911.203</li>
-        <li>Microsoft Edge versão 89.0.774.48</li>
+        <li>Google Chrome Versão 90.0.4430.93</li>
+        <li>Mozila Firefox Versão 88.0</li>
+        <li>Opera Versão 75.0.3969.243</li>
+        <li>Microsoft Edge versão 90.0.818.51</li>
     </ul>
     <br>
     <ul><p>Versões de Smartphones</p>
-        <li>Google Chrome Versão 85.0.4183.83</li>
-        <li>Microsoft Edge 45.05.4.5036</li>
-        <li>Mozila Firefox Versão 68.9.0</li>
-        <li>Opera versão 58.2.2878.53402</li>
-        <li>Vivaldi 3.1.1935.19</li>
+        <li>Google Chrome Versão 90.0.4430.91</li>
+        <li>Microsoft Edge 46.03.4.5155</li>
+        <li>Mozila Firefox Versão 88.1.2</li>
+        <li>Opera versão 63.3.3216.58675</li>
+        <li>Vivaldi 3.8.2267.25</li>
     </ul>
     `
     //gera o código para o campo de problemas conhecidos
@@ -59,6 +59,7 @@ function info(){ //gera o html para o modal de sobre o site
 //modifica o corpo de texto da página com o que foi modificado em cada versão
 function notasVersao(){
     let notas = document.getElementById('nota').innerHTML = `
+    <p>Versão 3.0.4 – Adicionados os projetos que estão em download no Mega em repositórios no GitHub, suas URLs foram adicionadas em Links em seus devidos lugares na página de projetos. Foi atualizado o conteúdo da página de formação acadêmica.</p>
     <p>Versão 3.0.3 – Foi adicionado as Atividades Desafiadoras das Unidades 05 e 06 de Programação para Internet, como também, para fazerem elas funcionarem, foi criado as tabelas de BD necessárias para as atividades funcionarem. Por decisão minha, deixei de testar em alguns navegadores, são eles: Midori, Gnome Web, Samsung Internet, Vivaldi de desktop e Internet Explorer, então removi eles dos navegadores testados.</p>
     <p>Versão 3.0.2 – Foi corrigido o Banco de Dados do Exercício 37 de Linguagem de Programação Web, ele não havia sido feito neste servidor. Foi também adicionado a matéria de Programação para Internet no Curso de ADS, porém apenas as Unidades 02 e 03, que são as já terminadas.</p>
     <p>Versão 3.0.1 – Foi adicionado o campo de idade na tela inicial, campo esse que é automático, a idade é calculada capturando a data atual e fazendo o cálculo do dia, mês e ano. Houve também algumas modificações pequenas e pontuais.</p>
@@ -103,8 +104,7 @@ function sobreADS(){
     let sobre = document.getElementById('corpoTexto').innerHTML = `
     <p class="indent">
         Este curso ainda está em andamento. Apenas o que eu achar relevante irá ser posto aqui, 
-        como por exemplo as atividades de Banco de Dados 1, que apenas uma foi posta, pois todas as outras
-        não são relevantes ou interessantes.
+        apenas atividades práticas serão postadas aqui, pois conteúdos técnicos não há sentido ser posto aqui.
     </p>
     `
 }
