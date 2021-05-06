@@ -28,7 +28,7 @@ function info(){ //gera o html para o modal de sobre o site
         </li>
     </ul>`
     //Gera o código do campo de última data de modificação
-    var data = document.getElementById('data').innerHTML = '04/05/2021';
+    var data = document.getElementById('data').innerHTML = '06/05/2021';
     //gera o código do campo de versão do site
     var versao = document.getElementById('versao').innerHTML = "Versao 3.0.4<br/><a href='versoes.html'>Notas das versões</a>";
     //gera o campo de IDEs usadas
