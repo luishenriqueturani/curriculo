@@ -30,7 +30,7 @@ function info(){ //gera o html para o modal de sobre o site
     //Gera o código do campo de última data de modificação
     var data = document.getElementById('data').innerHTML = '13/06/2021';
     //gera o código do campo de versão do site
-    var versao = document.getElementById('versao').innerHTML = "Versao 3.0.4<br/><a href='versoes.html'>Notas das versões</a>";
+    var versao = document.getElementById('versao').innerHTML = "Versao 3.0.5<br/><a href='versoes.html'>Notas das versões</a>";
     //gera o campo de IDEs usadas
     var ides = document.getElementById('ides').innerHTML = '<li>Netbeans 8.2, posteriormente o Apache Netbeans 12.</li><li>Sublime Text (Não o uso mais)</li><li>Brackets (Não o uso mais)</li><li>Visual Studio Code</li><li>Android Studio</li><li>MySQL Worckbench 8.0</li><li>Xampp</li><li>Node.js</li><li>Gimp 2.10.20</li><li>Inkscape</li><li>Godot 3.2.1</li><li>FileZilla</li>'
     //gera o código para o campo de navegadores testados
@@ -59,6 +59,7 @@ function info(){ //gera o html para o modal de sobre o site
 //modifica o corpo de texto da página com o que foi modificado em cada versão
 function notasVersao(){
     let notas = document.getElementById('nota').innerHTML = `
+    <p>Versão 3.0.5 – Adicionadas as atividades e a matéria de Gerenciamento de Projetos e Qualidade de Software em projetos. Foi feito a alteração do local de hospedagem, problemas foram encontrados e corrigidos nas conexões com o banco de dados.</p>
     <p>Versão 3.0.4 – Adicionados os projetos que estão em download no Mega em repositórios no GitHub, suas URLs foram adicionadas em Links em seus devidos lugares na página de projetos. Foi atualizado o conteúdo da página de formação acadêmica.</p>
     <p>Versão 3.0.3 – Foi adicionado as Atividades Desafiadoras das Unidades 05 e 06 de Programação para Internet, como também, para fazerem elas funcionarem, foi criado as tabelas de BD necessárias para as atividades funcionarem. Por decisão minha, deixei de testar em alguns navegadores, são eles: Midori, Gnome Web, Samsung Internet, Vivaldi de desktop e Internet Explorer, então removi eles dos navegadores testados.</p>
     <p>Versão 3.0.2 – Foi corrigido o Banco de Dados do Exercício 37 de Linguagem de Programação Web, ele não havia sido feito neste servidor. Foi também adicionado a matéria de Programação para Internet no Curso de ADS, porém apenas as Unidades 02 e 03, que são as já terminadas.</p>
