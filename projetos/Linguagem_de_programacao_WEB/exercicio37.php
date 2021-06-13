@@ -22,10 +22,10 @@
         <?php
 
             define("DSN", "mysql");
-            define("SERVIDOR", "sql312.epizy.com");
-            define("USUARIO", "epiz_26061509");
-            define("SENHA", "geyKgAixlnZF");
-            define("BANCODEDADOS", "epiz_26061509_teste");
+            define("SERVIDOR", "sql202.epizy.com");
+            define("USUARIO", "epiz_28871846");
+            define("SENHA", "a1L09N1lTjHB4DW");
+            define("BANCODEDADOS", "epiz_28871846_ativ_desaf");
             function conectar() {
 
                 $conn = new PDO(DSN.':host='.SERVIDOR.';dbname='.BANCODEDADOS,USUARIO,SENHA);//a conexão é estabelecida, recebendo as constantes como valor nos seus campos
