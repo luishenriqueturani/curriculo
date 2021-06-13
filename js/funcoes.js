@@ -28,7 +28,7 @@ function info(){ //gera o html para o modal de sobre o site
         </li>
     </ul>`
     //Gera o código do campo de última data de modificação
-    var data = document.getElementById('data').innerHTML = '06/05/2021';
+    var data = document.getElementById('data').innerHTML = '13/06/2021';
     //gera o código do campo de versão do site
     var versao = document.getElementById('versao').innerHTML = "Versao 3.0.4<br/><a href='versoes.html'>Notas das versões</a>";
     //gera o campo de IDEs usadas
@@ -89,14 +89,12 @@ function gerarIdade(){
     let idade = ano - 1993
     
     if(mes <= 5){  //se mês for menor ou igual a 5 executa o código, senão...
-        if(dia < 21){  //se o dia for menor, anterior ao 21, executa o código subtraindo 1 do ano, senão...
-            document.getElementById('idade').innerHTML = idade - 1
-        }else{   //executa um código sem subtrair nada
-            document.getElementById('idade').innerHTML = idade
+        if(dia < 21){  //se o dia for menor, anterior ao 21, subtrai 1 do ano, senão mantém o valor...
+            idade - 1
+            console.log(idade)
         }
-    }else{   //... executa este código
-        document.getElementById('idade').innerHTML = idade
-    }
+    }//no final altera o html adicionando a idade
+    document.getElementById('idade').innerHTML = idade
 }
 //função para mostrar o conteúdo extra de informações do curso de ADS no modal
 function sobreADS(){
